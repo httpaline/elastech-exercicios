@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana2.metodos;
+package io.github.httpaline.elastech.semana02.metodos;
 
 import java.util.Scanner;
 

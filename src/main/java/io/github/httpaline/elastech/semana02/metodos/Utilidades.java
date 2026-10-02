@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana2.metodos;
+package io.github.httpaline.elastech.semana02.metodos;
 
 public class Utilidades {
     static void saudar(String nome){

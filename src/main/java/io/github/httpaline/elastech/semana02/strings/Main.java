@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana2.strings;
+package io.github.httpaline.elastech.semana02.strings;
 
 import java.util.Scanner;
 
