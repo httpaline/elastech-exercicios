@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana3.arraylist;
+package io.github.httpaline.elastech.semana3.arrayList;
 
 import java.util.ArrayList;
 import java.util.List;
