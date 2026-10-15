@@ -94,6 +94,7 @@ public class PetShop {
 
                 default:
                     System.out.println("Digite uma opção válida!");
+                    break;
             }
 
 
@@ -101,7 +102,6 @@ public class PetShop {
 
         }
 
-
-
+        sc.close();
     }
 }
