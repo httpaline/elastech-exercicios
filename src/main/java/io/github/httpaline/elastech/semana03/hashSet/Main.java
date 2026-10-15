@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana3.hashSet;
+package io.github.httpaline.elastech.semana03.hashSet;
 
 import java.util.ArrayList;
 import java.util.HashSet;
