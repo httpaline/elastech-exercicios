@@ -1,6 +1,4 @@
-package io.github.httpaline.elastech.semana3.heranca;
-
-import jdk.swing.interop.SwingInterOpUtils;
+package io.github.httpaline.elastech.semana03.heranca;
 
 public class Funcionario {
     String nome;

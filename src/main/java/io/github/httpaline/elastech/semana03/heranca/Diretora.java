@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana3.heranca;
+package io.github.httpaline.elastech.semana03.heranca;
 
 public class Diretora extends Gerente{
     void definirMeta(String meta){

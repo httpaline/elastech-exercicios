@@ -1,4 +1,4 @@
-package io.github.httpaline.elastech.semana3.heranca;
+package io.github.httpaline.elastech.semana03.heranca;
 
 public class Aluna extends Pessoa {
     String curso;
