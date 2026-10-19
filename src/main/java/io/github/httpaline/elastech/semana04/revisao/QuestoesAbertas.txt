@@ -1,0 +1,66 @@
+1 - a) Explique, com suas palavras, o que é abstração em programação orientada a objetos.
+
+Abstração é mostrar o que importa e esconder o que não importa. Ao modelar uma entidade, mantemos só as características relevantes para o problema que o sistema resolve, e ao usar um objeto, conhecemos o que ele faz sem precisar saber como ele faz.
+
+
+b) Qual a diferença entre abstração e encapsulamento?
+
+Abstração é decisão de desing e o encapsulamento é o mecanismo que garante essa decisão no código. Enquanto a abstração responde a pergunta de como mostrar, o encapsulamento lida com como proteger.
+
+
+c) Quando você usa lista.add("Ana"), você sabe como o Java guarda esse elemento na memória? Por que isso é um exemplo de abstração?
+
+Não, Ao chamar lista.add("Ana") só sabemos o que o metodo faz: adicionar o elemento ao final da lista. É sim um exemplo claro de abstração pois List expõe uma operação simples e abstrai a complexidade/detalhes de implementação.
+
+
+2 - Para cada código abaixo, diga qual princípio do SOLID está sendo violado e explique como você corrigiria.
+
+a)
+
+class Relatorio {
+    void calcularTotais() { /* ... */ }
+    void formatarEmPdf() { /* ... */ }
+    void salvarNoDisco() { /* ... */ }
+    void enviarPorEmail() { /* ... */ }
+}
+
+S - Single Responsability. A classe Repositório tem quatro responsabilidades diferentes, o certo seria separar em 4 classes diferentes.
+
+
+b)
+
+class EnviadorEmail {
+    void enviar(String tipo) {
+        if (tipo.equals("aniversario")) {
+            System.out.println("Feliz aniversário!");
+        } else if (tipo.equals("seguranca")) {
+            System.out.println("Alerta de segurança!");
+        } else if (tipo.equals("promocao")) {
+            System.out.println("Promoção imperdível!");
+        }
+    }
+}
+
+O - Open/Closed. A classe não está fechada para modificação, cada novidade altera o código que já funciona e o if/else só cresce. O certo seria criar uma abstração para o tipo de mensagem utilizando interface, e uma classe para cada tipo.
+
+
+c)
+
+class PedidoService {
+    private MySQLRepositorio repo = new MySQLRepositorio();
+
+    void finalizar() {
+        repo.salvar();
+    }
+}
+
+D - Dependency Inversion Principle. A classe de alto nível PedidoSrvice depende de uma classe de baixo nivel MySQLRepositorio. O certo seria que se comunicassem atravez de uma interface onde nenhum conhece o outro.
+
+Explique quem pode acessar um atributo ou método declarado com cada modificador:
+
+a) private -> Somente a pŕopria classe pode acessar, nenhuma outra enxerga, nem as filhas.
+b) protected -> A propria classe, o mesmo pacote e as filhas mesmo em outros pacotes. Usado quando queremos que as filhas tenham acesso aos atributos mas sem deixar publico.
+c) default -> A propria classe e qualquer outra do mesmo pacote. Fora do pacote ninguem enxerga, nem as filhas.
+d) public -> Qualquer classe de qualquer pacote.
+
+Conceitos usados: Encapsulamento, Herança, Polimorfismo, Abstração.

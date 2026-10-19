@@ -1,12 +1,12 @@
 package io.github.httpaline.elastech.semana03.petshop;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class PetShopMenu {
     private static final int LIMITE_PETS = 5;
     private final Pet[] animais = new Pet[LIMITE_PETS];
     private int qtdAnimais = 0;
-    private final Scanner sc = new Scanner(System.in);
+    private final Entrada entrada = new Entrada();
+
 
     public void iniciar() {
         int opcao = -1;
@@ -17,16 +17,8 @@ public class PetShopMenu {
             System.out.println("2 - Listar pets");
             System.out.println("3 - Buscar pelo nome");
             System.out.println("0 - Sair");
-            System.out.println("Escolha: ");
+            opcao = entrada.lerInteiro("Escolha: ");
 
-            try {
-                opcao = sc.nextInt();
-                sc.nextLine();
-            }catch (InputMismatchException ime){
-                System.out.println("\nDigite apenas números!");
-                sc.nextLine();
-                continue;
-            }
 
             switch (opcao){
                 case 0:
@@ -46,7 +38,9 @@ public class PetShopMenu {
                     break;
             }
         }
-        sc.close();
+
+        entrada.fechar();
+
     }
 
 
@@ -60,12 +54,9 @@ public class PetShopMenu {
             return;
         }
 
-        System.out.println("Digite o nome do seu pet: ");
-        String nome  = sc.nextLine();
-        System.out.println("Digite a espécie do seu pet: ");
-        String especie = sc.nextLine();
-        System.out.println("Digite o peso do seu pet: ");
-        double peso = Double.parseDouble(sc.nextLine().replace(",","."));
+        String nome = entrada.lerTexto("Digite o nome do seu pet: ");
+        String especie = entrada.lerTexto("Digite a espécie do seu pet: ");
+        double peso = entrada.lerDecimal("Digite o peso do seu pet: ");
 
         Pet animal = new Pet(nome, especie, peso);
 
@@ -93,8 +84,7 @@ public class PetShopMenu {
     }
 
     private void buscar() {
-        System.out.println("Qual pet você procura?");
-        String busca = sc.nextLine();
+        String busca = entrada.lerTexto("Qual pet você procura?");
 
         boolean achou = false;
         for(int i=0;i<qtdAnimais;i++){
