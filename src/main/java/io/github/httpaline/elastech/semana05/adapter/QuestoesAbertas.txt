@@ -1,3 +1,4 @@
-1 - Não da pra utilizar implements direto porque a interface tem uma assinatura diferente da externa. O certo é criar uma classe adaptadora que implementa a interface do sistema e, dentro do método implementado,
+4 - Não da pra utilizar implements direto porque a interface tem uma assinatura diferente da externa. O certo é criar uma classe adaptadora que implementa a interface do sistema e, dentro do método implementado,
 chama a classe externa fazendo a tradução necessária. Dessa forma, nem a interface nem a classe externa são modificadas.
 
+5 - C

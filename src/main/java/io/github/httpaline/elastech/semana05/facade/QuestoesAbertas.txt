@@ -1,0 +1,7 @@
+7 - O Facade resolve o problema de usar um conjunto de classes que, juntas,
+exigem muitos passos e conhecimento demais de quem chama.
+
+8 - F
+    V
+    F
+
