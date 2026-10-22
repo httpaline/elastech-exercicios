@@ -1,0 +1,6 @@
+1 - A factory resolve o problema de espalhar a decisão de "qual classe criar" pelo código centralizando em uma classe
+que fica responsável exclusivamente pela criação do objeto. Dessa forma quem usa depende apenas da interface, e adicionar
+um novo tipo exige alterar só a Factory.
+
+2 - b
+
