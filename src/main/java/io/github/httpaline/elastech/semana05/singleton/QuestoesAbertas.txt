@@ -1,0 +1,15 @@
+1 - b
+
+2 - O construtor Sigleton é private porque sua finalidade é garantir que haja apenas uma instancia do objeto, ao
+colocar como private ele garante que nenhuma outra classe possa usar new e a única forma de se obter o objeto passa
+a ser um método estático da própria classe, ex: getInstancia().
+
+3 - static
+
+4 - Não compila, o java vai indicar erro porque o construtor de COnfiguraao é private, então só pode ser chamado
+dentro da própria classe.
+
+5 - b
+
+
+
