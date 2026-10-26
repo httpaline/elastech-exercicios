@@ -1,0 +1,13 @@
+1 - O Observer deixa quem tem a novidade e quem quer saber dela desacoplados.
+ Sem ele, ou os interessados ficariam perguntando o tempo todo se algo mudou,
+ ou o objeto observado precisaria conhecer cada interessado pelo nome e ser
+ alterado sempre que surgisse um novo. O sininho de um canal no YouTube.
+ Quem ativa o sininho passa a ser avisado sempre que sai um vídeo novo,
+ sem precisar entrar no canal para conferir.
+
+ 2 - Subject é o observado: o objeto que tem a novidade. Ele guarda a lista de interessados e oferece métodos para alguém se inscrever e se desinscrever.
+ Observer é quem observa: quem quer ser avisado quando algo acontecer.
+
+ 3 - NADA! O Pedido não precisa conhecer o Entregador: ele só conhece a interface de observador.
+  Basta criar a classe Entregador implementando essa interface e inscrevê-la na lista de interessados
+  do pedido. Quando o status mudar, o Pedido avisa todos da lista, e o Entregador recebe o aviso junto com os outros.
