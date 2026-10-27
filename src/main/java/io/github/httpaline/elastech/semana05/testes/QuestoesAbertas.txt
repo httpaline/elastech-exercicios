@@ -1,0 +1,11 @@
+1 - B
+2 - C
+3 - B
+4 - D
+5 - B
+
+6 - Porque depende da pessoa ler todas as saídas e decidir se está correto, o que não escala. Além disso, em um projeto
+grande existem centenas de comportamentos e funções para conferir, sendo fácil deixar passar erros se conferido manualmente.
+- Ela esqueceu o @Test, sem ele o JUnit não reconhece o método como teste e simplesmente não executa - Porque o teste verde é
+a garantia que o código funciona, ao refatorar mudamos a estrutura sem mudar o comportamento, se algo falhar o teste fica
+vermelho. Se não fizessemos dessa forma não saberíamos se o teste quebrou.
