@@ -1,0 +1,7 @@
+1 - Criar uma classe para cada combinação causa uma explosão de classes.Com 4 adicionais já existem
+ 16 combinações possíveis e mudar o preço de um adicional exige editar várias classes. O Decorator resolve
+ isso criando uma classe por adicional, não por combinação. Cada adicional implementa a mesma interface do açaí,
+ guarda dentro de si o item que está “embrulhando” e acrescenta só a sua parte.
+
+2 - B
+
